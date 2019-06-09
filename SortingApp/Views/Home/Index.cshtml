@@ -1,0 +1,74 @@
+﻿@using SortingApp.DTOs
+@model SortingApp.Models.Payload
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Please paste the JSON below</h2>
+    
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <fieldset>
+            <div>
+                @Html.LabelFor(model => model.JsonInput)
+            </div>
+            <div>
+                @Html.TextAreaFor(model => model.JsonInput, new { style="width:700px;", @rows=10})
+                @Html.ValidationMessageFor(model => Model.JsonInput)
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model.SortBy)
+            </div>
+            <div>
+                @Html.DropDownListFor(model => model.SortBy, new SelectList(new[]
+                {
+                    SortByDto.Age, SortByDto.Registered, SortByDto.LastName
+                }))
+                @Html.ValidationMessageFor(model => Model.SortBy)
+            </div>
+        </fieldset>
+        <br/>
+        <p>
+            <input type="submit" class="btn btn-primary btn-lg" value="Sort &raquo;">
+            @Html.ValidationSummary(true)
+        </p>
+
+    }
+
+</div>
+
+
+@if (Model.Customers.Any())
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Response</h2>
+            <div><b>Table Format Data Displaying in ForEach</b><br /></div>  
+            <table class="table table-bordered table-responsive table-hover">  
+                <tr>    
+                    <th>First Name </th>  
+                    <th>Last Name </th>  
+                    <th>Age</th>  
+                    <th>Gender</th>  
+                    <th>Email</th>  
+                    <th>Registered</th>  
+                </tr>  
+                @foreach (var d in Model.Customers)  
+                {  
+                    <tr>  
+                        <td>@d.FirstName</td>  
+                        <td>@d.LastName</td>  
+                        <td>@d.Age</td>  
+                        <td>@d.Gender</td>  
+                        <td>@d.Email</td>  
+                        <td>@d.Registered</td>  
+  
+                    </tr>  
+                }  
+            </table>  
+        </div>
+    </div>
+}

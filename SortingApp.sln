@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingApp", "SortingApp\SortingApp.csproj", "{27EE7CD9-8FF3-43A4-8EE8-276B278F0B0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortingApp.Api", "SortingApp.Api\SortingApp.Api.csproj", "{A73C971C-E03A-406B-B9D0-DDA721C5121A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27EE7CD9-8FF3-43A4-8EE8-276B278F0B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27EE7CD9-8FF3-43A4-8EE8-276B278F0B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27EE7CD9-8FF3-43A4-8EE8-276B278F0B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27EE7CD9-8FF3-43A4-8EE8-276B278F0B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A73C971C-E03A-406B-B9D0-DDA721C5121A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73C971C-E03A-406B-B9D0-DDA721C5121A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73C971C-E03A-406B-B9D0-DDA721C5121A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73C971C-E03A-406B-B9D0-DDA721C5121A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {461495A8-CC9D-4365-BECC-6A16BD3EB773}
+	EndGlobalSection
+EndGlobal
